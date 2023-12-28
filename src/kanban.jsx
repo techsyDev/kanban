@@ -1,5 +1,6 @@
 import React, { useEffect, useState, useRef } from 'react'
 import data from './data.json'
+import Toolbar from './Toolbar';
 // import { FaCircle } from "react-icons/fa6";
 
 // const width = window.innerWidth;
@@ -149,8 +150,20 @@ const Kanban = () => {
   // }
 
 
+  // Filters
+  const [filter, setFilter] = useState({
+    color: "",
+    date: "",
+    status: "",
+    priority: 0
+  })
 
+  // Showcases
 
+  const [containerIndex, setContainerIndex] = useState(0)
+  const handleContainerIndexChange = (i) => {
+    setContainerIndex(i)
+  }
   const renderKanban = () => {
     return (
       <div className='space-x-2'
@@ -160,43 +173,51 @@ const Kanban = () => {
           gridArea: 'auto / auto / auto / auto',
           gridColumn: formatedDataLabel.length
         }}>
-        {formatedDataLabel.map(label => {
+        {formatedDataLabel.map((label, i) => {
           let width = 100 / formatedDataLabel.length;  //100 vw / no of column width
           width = width - 2; // minus horizontal padding 
           width = width * windowWidth / 100;
           return (
-            <div key={label}>
-              <div ref={divRef} className='h-[80vh] overflow-auto'  >
-                <ul className='flex h-full w-full flex-wrap-reverse content-start items-end justify-start bg-[#f1f2f7] '
-                  style={{ width: `${width}px`, }}
+            <div key={label} className={`transition-all duration-1000 ${containerIndex === 0 ? "block" : containerIndex === i + 1 ? "block" : "hidden"}`}>
+              <div ref={divRef}
+                className={`h-[80vh] overflow-auto`}
+                onClick={() => handleContainerIndexChange(i + 1)} >
+                <ul className='flex h-full w-full transition-all duration-1000 flex-wrap-reverse content-start items-end justify-start bg-[#f1f2f7] '
+                  style={{ width: `${containerIndex === 0 ? width + "px" : containerIndex === i + 1 ? "100%" : width + "px"}`, }}
                 // style={{ display:'grid', gridAutoFlow: 'column dense', gridArea:'auto / auto / auto / auto',   gridColumn:formatedDataLabel.length}}
                 >
-                  {formatedData[label].map(ticket => (
-                    formatedDataLabel.length < 4 ?
-                      <li
-                        className='flex items-end justify-end rounded-full'
-                        style={{ width: nodeSize, height: nodeSize, overflow: "hidden", backgroundColor: colorCodes[ticket.color] }}
-                        key={ticket.id}>
-                        <p> {ticket.title.slice(0, 25) + '...'} </p>
-                      </li>
-                      :
-                      <li className='flex items-end justify-end  rounded-full'
-                        style={{ width: nodeSize, height: nodeSize, overflow: "hidden", backgroundColor: colorCodes[ticket.color] }}
-                        key={ticket.id}>
-                        {/* <FaCircle 
+                  {formatedData[label]
+                    .filter((ticket) => ticket.color.includes(filter.color))
+                    .filter((ticket) => ticket.date.includes(filter.date))
+                    .filter((ticket) => ticket.status.includes(filter.status))
+                    .filter((ticket) => filter.priority === 0 ? ticket : ticket.priority === Number(filter.priority))
+                    .map(ticket => (
+                      formatedDataLabel.length < 4 ?
+                        <li
+                          className='flex items-end justify-end rounded-full'
+                          style={{ width: nodeSize, height: nodeSize, overflow: "hidden", backgroundColor: colorCodes[ticket.color] }}
+                          key={ticket.id}>
+                          <p> {ticket.title.slice(0, 25) + '...'} </p>
+                        </li>
+                        :
+                        <li className='flex items-end justify-end  rounded-full'
+                          style={{ width: nodeSize, height: nodeSize, overflow: "hidden", backgroundColor: colorCodes[ticket.color] }}
+                          key={ticket.id}>
+                          {/* <FaCircle 
                       size={nodecontainerWidth}
                       className='text-yellow-200' /> */}
 
 
-                      </li>
-                  ))}
+                        </li>
+                    ))}
                 </ul>
               </div>
               <p style={{ fontSize: '0.5rem' }}>{label}</p>
             </div>
           )
-        })}
-      </div>
+        })
+        }
+      </div >
     )
   }
 
@@ -205,6 +226,7 @@ const Kanban = () => {
       <div className='m-5 h-screen'
         style={{ width: "calc(100vw - 2.5rem)" }}
       >
+        <Toolbar filter={filter} setFilter={setFilter} setIndex={setContainerIndex} />
         {renderKanban()}
       </div>
     )
