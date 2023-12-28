@@ -1,0 +1,292 @@
+{
+	
+    "tickets": [
+        {
+            "id": "CAM-1",
+            "date": "01-12-2023",
+            "isHide": false,
+            "title": "Update User Profile Page UI",
+            "userId": "usr-1",
+            "status": "Todo",
+            "listLabel":"Customer",
+            "priority": 4,
+            "color": "green"
+        },
+        {
+            "id": "CAM-1",
+            "date": "01-12-2023",
+            "isHide": false,
+            "title": "Update User Profile Page UI",
+            "userId": "usr-1",
+            "status": "Todo",
+            "listLabel":"Customer",
+            "priority": 4,
+            "color": "green"
+        },
+        {
+            "id": "CAM-1",
+            "date": "01-12-2023",
+            "isHide": false,
+            "title": "Update User Profile Page UI",
+            "userId": "usr-1",
+            "status": "Todo",
+            "listLabel":"Customer",
+            "priority": 4,
+            "color": "green"
+        },
+        {
+            "id": "CAM-1",
+            "date": "01-12-2023",
+            "isHide": false,
+            "title": "Update User Profile Page UI",
+            "userId": "usr-1",
+            "status": "Todo",
+            "listLabel":"Customer",
+            "priority": 4,
+            "color": "green"
+        },
+        {
+            "id": "CAM-1",
+            "date": "01-12-2023",
+            "isHide": false,
+            "title": "Update User Profile Page UI",
+            "userId": "usr-1",
+            "status": "Todo",
+            "listLabel":"Customer",
+            "priority": 4,
+            "color": "green"
+        },
+        {
+            "id": "CAM-1",
+            "date": "01-12-2023",
+            "isHide": false,
+            "title": "Update User Profile Page UI",
+            "userId": "usr-1",
+            "status": "Todo",
+            "listLabel":"Customer",
+            "priority": 4,
+            "color": "green"
+        },
+        {
+            "id": "CAM-1",
+            "date": "01-12-2023",
+            "isHide": false,
+            "title": "Update User Profile Page UI",
+            "userId": "usr-1",
+            "status": "Todo",
+            "listLabel":"Customer",
+            "priority": 4,
+            "color": "green"
+        },
+
+        {
+            "id": "CAM-1",
+            "date": "01-12-2023",
+            "isHide": false,
+            "title": "Update User Profile Page UI",
+            "userId": "usr-1",
+            "status": "Todo",
+            "listLabel":"Customer",
+            "priority": 4,
+            "color": "green"
+        }, {
+            "id": "CAM-1",
+            "date": "01-12-2023",
+            "isHide": false,
+            "title": "Update User Profile Page UI",
+            "userId": "usr-1",
+            "status": "Todo",
+            "listLabel":"Customer",
+            "priority": 4,
+            "color": "green"
+        },
+
+     
+        {
+            "id": "CAM-1",
+            "date": "01-12-2023",
+            "isHide": false,
+            "listLabel":"Customer",
+            "title": "Update User Profile Page UI",
+            "color": "red",
+
+            "userId": "usr-1",
+            "status": "Todo",
+            "priority": 4
+        },
+        {
+            "id": "CAM-1",
+            "date": "01-12-2023",
+            "isHide": false,
+            "listLabel":"Customer",
+            "title": "Update User Profile Page UI",
+            "color": "red",
+
+            "userId": "usr-1",
+            "status": "Todo",
+            "priority": 4
+        },
+        {
+            "id": "CAM-1",
+            "date": "01-12-2023",
+            "isHide": false,
+            "listLabel":"Customer",
+            "title": "Update User Profile Page UI",
+            "color": "red",
+
+            "userId": "usr-1",
+            "status": "Todo",
+            "priority": 4
+        },
+        {
+            "id": "CAM-2",
+            "date": "14-01-2023",
+            "isHide": false,
+            "listLabel":"Customer",
+            "title": "Add Multi-Language Support - Enable multi-language support within the application.",
+            "color": "yellow",
+            "userId": "usr-2",
+            "status": "In progress",
+            "priority": 3
+        },
+        {
+            "id": "CAM-3",
+            "date": "21-11-2023",
+            "isHide": false,
+            "listLabel":"Customer",
+            "title": "Optimize Database Queries for Performance",
+            "color": "yellow",
+            "userId": "usr-2",
+            "status": "In progress",
+            "priority": 1
+        },
+        {
+            "id": "CAM-4",
+            "date": "14-01-2023",
+            "isHide": false,
+            "listLabel":"Employee",
+            "title": "Implement Email Notification System",
+            "color": "yellow",
+            "userId": "usr-1",
+            "status": "In progress",
+            "priority": 3
+        },
+        {
+            "id": "CAM-3",
+            "date": "21-11-2023",
+            "isHide": false,
+            "listLabel":"Employee",
+            "title": "Optimize Database Queries for Performance",
+            "color": "yellow",
+            "userId": "usr-2",
+            "status": "In progress",
+            "priority": 1
+        },
+        {
+            "id": "CAM-3",
+            "date": "21-11-2023",
+            "isHide": false,
+            "listLabel":"Employee",
+            "title": "Optimize Database Queries for Performance",
+            "color": "yellow",
+            "userId": "usr-2",
+            "status": "In progress",
+            "priority": 1
+        },
+        {
+            "id": "CAM-3",
+            "date": "21-11-2023",
+            "isHide": false,
+            "listLabel":"Employee",
+            "title": "Optimize Database Queries for Performance",
+            "color": "yellow",
+            "userId": "usr-2",
+            "status": "In progress",
+            "priority": 1
+        },
+        {
+            "id": "CAM-3",
+            "date": "21-11-2023",
+            "isHide": false,
+            "listLabel":"Employee",
+            "title": "Optimize Database Queries for Performance",
+            "color": "yellow",
+            "userId": "usr-2",
+            "status": "In progress",
+            "priority": 1
+        },
+            {
+            "id": "CAM-1",
+            "date": "01-12-2023",
+            "isHide": false,		
+            "title": "Update User Profile Page UI",
+            "listLabel":"Customer 13",
+            "userId": "usr-1",
+            "status": "Todo",
+            "priority": 4,
+            "color": "red"
+        },
+        {
+            "id": "CAM-1",
+            "date": "01-12-2023",
+            "isHide": false,		
+            "title": "Update User Profile Page UI",
+            "listLabel":"Customer 14",
+            "userId": "usr-1",
+            "status": "Todo",
+            "priority": 4,
+            "color": "red"
+        },
+        {
+            "id": "CAM-1",
+            "date": "01-12-2023",
+            "isHide": false,		
+            "title": "Update User Profile Page UI",
+            "listLabel":"Customer 15",
+            "userId": "usr-1",
+            "status": "Todo",
+            "priority": 4,
+            "color": "red"
+        },
+        {
+            "id": "CAM-1",
+            "date": "01-12-2023",
+            "isHide": false,		
+            "title": "Update User Profile Page UI",
+            "listLabel":"Customer 16",
+            "userId": "usr-1",
+            "status": "Todo",
+            "priority": 4,
+            "color": "red"
+        }
+     
+    ],
+    "users": [
+        {
+            "id": "usr-1",
+            "name": "Anoop sharma",
+            "available": false
+        },
+        {
+            "id": "usr-2",
+            "name": "Yogesh",
+            "available": true
+        },
+        {
+            "id": "usr-3",
+            "name": "Shankar Kumar",
+            "available": true
+        },
+        {
+            "id": "usr-4",
+            "name": "Ramesh",
+            "available": true
+        },
+        {
+            "id": "usr-5",
+            "name": "Suresh",
+            "available": true
+        }
+    ]
+
+}
