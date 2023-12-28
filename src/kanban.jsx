@@ -158,6 +158,8 @@ const Kanban = () => {
     priority: 0
   })
 
+  console.log(filter)
+
   // Showcases
 
   const [containerIndex, setContainerIndex] = useState(0)
@@ -178,7 +180,7 @@ const Kanban = () => {
           width = width - 2; // minus horizontal padding 
           width = width * windowWidth / 100;
           return (
-            <div key={label} className={`transition-all duration-1000 ${containerIndex === 0 ? "block" : containerIndex === i + 1 ? "block" : "hidden"}`}>
+            <div key={i} className={`transition-all duration-1000 ${containerIndex === 0 ? "block" : containerIndex === i + 1 ? "block" : "hidden"}`}>
               <div ref={divRef}
                 className={`h-[80vh] overflow-auto`}
                 onClick={() => handleContainerIndexChange(i + 1)} >
@@ -187,22 +189,22 @@ const Kanban = () => {
                 // style={{ display:'grid', gridAutoFlow: 'column dense', gridArea:'auto / auto / auto / auto',   gridColumn:formatedDataLabel.length}}
                 >
                   {formatedData[label]
-                    .filter((ticket) => ticket.color.includes(filter.color))
-                    .filter((ticket) => ticket.date.includes(filter.date))
-                    .filter((ticket) => ticket.status.includes(filter.status))
-                    .filter((ticket) => filter.priority === 0 ? ticket : ticket.priority === Number(filter.priority))
-                    .map(ticket => (
+                    .filter(ticket => ticket.color.includes(filter.color))
+                    .filter(ticket => ticket.date.includes(filter.date))
+                    .filter(ticket => ticket.status.includes(filter.status))
+                    .filter(ticket => filter.priority === 0 ? ticket : ticket.priority === Number(filter.priority))
+                    .map((ticket, i) => (
                       formatedDataLabel.length < 4 ?
                         <li
                           className='flex items-end justify-end rounded-full'
                           style={{ width: nodeSize, height: nodeSize, overflow: "hidden", backgroundColor: colorCodes[ticket.color] }}
-                          key={ticket.id}>
+                          key={i}>
                           <p> {ticket.title.slice(0, 25) + '...'} </p>
                         </li>
                         :
                         <li className='flex items-end justify-end  rounded-full'
                           style={{ width: nodeSize, height: nodeSize, overflow: "hidden", backgroundColor: colorCodes[ticket.color] }}
-                          key={ticket.id}>
+                          key={i}>
                           {/* <FaCircle 
                       size={nodecontainerWidth}
                       className='text-yellow-200' /> */}
