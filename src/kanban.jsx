@@ -193,23 +193,18 @@ const Kanban = () => {
                     .filter(ticket => ticket.date.includes(filter.date))
                     .filter(ticket => ticket.status.includes(filter.status))
                     .filter(ticket => filter.priority === 0 ? ticket : ticket.priority === Number(filter.priority))
-                    .map((ticket, i) => (
-                      formatedDataLabel.length < 4 ?
+                    .map((ticket, index) => (
+                      formatedDataLabel.length < 4 || containerIndex === i + 1 ?
                         <li
-                          className='flex items-end justify-end rounded-full'
+                          className='flex items-center justify-center rounded-full'
                           style={{ width: nodeSize, height: nodeSize, overflow: "hidden", backgroundColor: colorCodes[ticket.color] }}
-                          key={i}>
-                          <p> {ticket.title.slice(0, 25) + '...'} </p>
+                          key={index}>
+                          <p className='text-xs h-[15px] w-full overflow-hidden text-center'> {ticket.title} </p>
                         </li>
                         :
                         <li className='flex items-end justify-end  rounded-full'
                           style={{ width: nodeSize, height: nodeSize, overflow: "hidden", backgroundColor: colorCodes[ticket.color] }}
-                          key={i}>
-                          {/* <FaCircle 
-                      size={nodecontainerWidth}
-                      className='text-yellow-200' /> */}
-
-
+                          key={index}>
                         </li>
                     ))}
                 </ul>
